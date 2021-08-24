@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+    <title>react 0.14.8 exam 1</title>
+  </head>
+  <body>
+    <div id="container"></div>
+
+    <script src="../lib/react.js"></script>
+    <!-- <script src="../lib/JSXTransformer.js"></script> -->
+
+    <!-- <script type="text/jsx" src="index.js"></script> -->
+
+    <script>
+      var ExampleApplication = React.createClass({
+        render: function () {
+          var message = "Hello";
+
+          return React.DOM.p(null, message);
+        },
+      });
+
+      React.renderComponent(
+        ExampleApplication(),
+        document.getElementById("container")
+      );
+    </script>
+  </body>
+</html>
