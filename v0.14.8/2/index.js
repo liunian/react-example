@@ -1,3 +1,13 @@
+class Button extends React.Component {
+    render() {
+        return <button>{this.props.children}</button>;
+    }
+}
+
+function Icon({ children }) {
+    return <span className="icon">{children}</span>;
+}
+
 class Demo extends React.Component {
   constructor(props) {
     super(props);
@@ -6,17 +16,14 @@ class Demo extends React.Component {
     };
   }
 
-  handleClick() {
-    this.setState(s => ({
-        count: s.count + 1
-    }));
-  }
-
   render() {
     return (
       <div>
         hello
-        <button onClick={this.handleClick.bind(this)}>add</button>
+        <Button>
+            <span>no effect</span>
+            <Icon>icon-x</Icon>
+        </Button>
         <span>{this.state.count}</span>
       </div>
     );
